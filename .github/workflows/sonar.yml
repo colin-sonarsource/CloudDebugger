@@ -42,6 +42,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"tndata_CloudDebugger" /o:"tndata" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.scanner.scanAll=false
+          .\.sonar\scanner\dotnet-sonarscanner /k:"colin-sonarsource-2_python-dup-demo" /o:"colin-sonarsource-2" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
